@@ -7,7 +7,7 @@ A hierarchical taxonomy for associating a WordPress post with a Bible reference.
 * *Tags:* Bible, custom taxonomy
 * *Requires at least:* 3.0.0
 * *Tested up to:* 3.8.1
-* *Stable tag:* 0.0.0
+* *Stable tag:* 0.0.1
 * *License:* GPLv3
 * *License URI:* [http://www.gnu.org/licenses/gpl-3.0.html](http://www.gnu.org/licenses/gpl-3.0.html) or see the included `LICENSE.txt` and `LICENSE.md`
 
@@ -35,7 +35,7 @@ This plugin doesn’t print anything. You can use anything that works with custo
 Installation
 ------------
 
-1. Upload `bible-taxonomy` folder to the `/wp-content/plugins/` directory
+1. Upload the `bible-taxonomy` folder to the `/wp-content/plugins/` directory
 1. Activate the plugin through the ‘Plugins’ menu in WordPress
 1. Go to _Posts > Bible Taxonomy_ to configure it if necessary
 
@@ -43,7 +43,11 @@ Installation
 
 This plugin works with `github-updater`: turn it on to get automatic update notices when a new version is published on GitHub.
 
+### Translations
+
+This plugin’s translations are managed via Transifex. To help out, please go to [https://www.transifex.com/projects/p/bible-taxonomy/](https://www.transifex.com/projects/p/bible-taxonomy/). Thank you!
+
 Change log
 ----------
 
-See `CHANGES.md`
+See [CHANGES.md](CHANGES.md)

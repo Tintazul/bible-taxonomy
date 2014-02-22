@@ -9,9 +9,9 @@
  * @wordpress-plugin
  * Plugin Name:       Bible Taxonomy
  * Plugin URI:        https://github.com/Tintazul/bible-taxonomy
- * Description:       A hierarchical taxonomy for associating a WordPress post with a Bible reference. Comes with books, can be extended with chapters and verses.
- * Version:           0.0.0
- * Author:            Júlio Reis
+ * Description:       A hierarchical taxonomy for associating a WordPress post with a Bible reference
+ * Version:           0.0.1
+ * Author:            Júlio Reis / A Rocha International
  * Author URI:        http://www.tintazul.com.pt/julio.reis/
  * Text Domain:       bible-taxonomy
  * License:           GPL-3.0
@@ -31,14 +31,18 @@ define( 'BT_MAINFILE', __FILE__ );                    // absolute path to this f
 define( 'BT_BASENAME', plugin_basename( __FILE__ ) ); // relative path to this file
 define( 'BT_PATH', plugin_dir_path( __FILE__ ) );     // absolute path to plugin dir
 define( 'BT_URL', plugin_dir_url( __FILE__ ) );       // URL to plugin dir
-define( 'BT_VERSION', '0.0.0' );                      // plugin version
+define( 'BT_VERSION', '0.0.1' );                      // plugin version
 define( 'BT_MIN_WP_VERSION', '3.0.0');                // required minimum WP version
 
 // load textdomain
 load_plugin_textdomain( 'bible-taxonomy', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 // hook into the init action and call create_book_taxonomies when it fires
-add_action( 'admin-init', 'bt_requires_wordpress_version', 0 );
+if ( is_admin() ) {
+	if ( defined('DOING_AJAX') && DOING_AJAX ) {  // if we had ajax, we’d load it here
+	}
+	else add_action( 'admin-init', 'bt_requires_wordpress_version', 0 );
+}
 add_action( 'init', 'bt_create_taxonomy', 0 );
 
 /**

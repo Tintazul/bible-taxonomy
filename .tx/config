@@ -1,0 +1,9 @@
+[main]
+host = https://www.transifex.com
+minimum_perc = 10
+
+[bible-taxonomy.bible-taxonomypot]
+file_filter = languages/bible-taxonomy-<lang>.po
+source_file = languages/bible-taxonomy.pot
+source_lang = en_US
+type = PO
